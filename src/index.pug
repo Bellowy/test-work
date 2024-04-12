@@ -14,4 +14,22 @@ body
     include template/pre_footer_block.pug
 
   include template/footer.pug
-  script(src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js")
+  script(src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js")
+  script.
+    const sliderEl = document.querySelector("#range")
+    const sliderValue = document.querySelector(".calc__offer_value")
+
+    sliderEl.addEventListener("input", (event) => {
+      const tempSliderValue = event.target.value;
+      sliderValue.textContent = tempSliderValue;
+    })
+  script.
+    document.addEventListener('DOMContentLoaded', function () {
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        pagination: {
+          el: ".swiper-pagination",
+          dynamicBullets: true,
+        },
+      });
+    });

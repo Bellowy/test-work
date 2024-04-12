@@ -1,0 +1,189 @@
+.calc__wrapper {
+  &-block {
+    display: flex;
+    align-items: center;
+    margin-top: 65px;
+
+    @media (max-width: $ipad_width) {
+      flex-direction: column;
+    }
+
+    .calc__offer {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-right: 135px;
+
+      @media (max-width: $ipad_width) {
+        margin-right: 0;
+      }
+
+      &_title-big {
+        margin-bottom: 4px;
+        color: rgba(216, 165, 106, .45);
+      }
+
+      &_title-wrapper {
+        display: flex;
+        border-bottom: 1.5px solid $color_hsla;
+
+        .calc__offer_title {
+          font-size: 30px;
+          font-weight: 600;
+          color: $color_hsla;
+        }
+
+        .calc__offer_sup {
+          font-size: 16px;
+          margin-left: 5px;
+          color: $color_hsla;
+        }
+      }
+
+      &_table-wrapper {
+        display: flex;
+
+        .calc__offer_table-items {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          margin-top: 24px;
+          white-space: nowrap;
+          width: 100%;
+
+          .calc__offer_table-item {
+            &_title {
+              color: $color_hsla;
+              opacity: 0.5;
+            }
+
+            &_text {
+              color: $color_hsla;
+            }
+          }
+        }
+      }
+
+      .calc__offer_value {
+        margin-top: 12px;
+        font-size: 46px;
+        font-weight: 600;
+        color: #d1a773;
+      }
+      
+      .calc__range-wrapper {
+        input {
+          width: 100%;
+          height: 3px;
+          outline: none;
+          background: $slider_color;
+          appearance: none;
+          cursor: pointer;
+
+          &::-webkit-slider-thumb {
+            appearance: none;
+            width: 14px;
+            height: 14px;
+            box-shadow: 0px 0px 8px 0px hsla(0, 0%, 0%, 1);
+            rotate: 45deg;
+            background-color: $color_hsla;
+            transition: .2s ease-in-out;
+          }
+
+          ::-webkit-slider-thumb:hover {
+            box-shadow: 0 0 0 10px rgba(255,85,0, .1)
+          }
+        }
+      }
+      
+      .calc__offer_value-minmax {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+        font-size: 16px;
+        color: rgba(216, 165, 106, .6);
+      }
+    }
+
+    .calc__sum {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      position: relative;
+
+      @media (max-width: $ipad_width) {
+        justify-content: center;
+        margin-top: 64px;
+      }
+
+      &_wrapper {
+        width: 100%;
+        padding: 20px 25px 30px 25px;
+        max-width: 625px;
+        white-space: nowrap;
+        border-width: 40px;
+        border-style: solid;
+        border-image-source: url(/images/border-svg.svg);
+        border-image-slice: 40;
+
+        @media (max-width: $big-mobile_width) {
+          width: auto;
+          border-width: 20px;
+        }
+
+        .calc__sum_table-title {
+          color: $color_hsla;
+        }
+
+        .calc__sum_container {
+          display: flex;
+          margin-top: 12px;
+
+          .calc__sum_rub {
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 1.33;
+            color: $color_hsla;
+            margin-right: 8px;
+            margin-top: 4px;
+          }
+
+          .calc__sum_value {
+            font-family: $TheArtistSans_font, sans-serif;
+            font-size: 64px;
+            line-height: 1.125;
+            font-weight: 600;
+            color: $color_hsla;
+          }
+        }
+
+        .calc__sum_table-wrapper {
+          display: flex;
+          flex-direction: column;
+          margin-top: 24px;
+          margin-bottom: 26px;
+
+          .calc__sum_table-wrapper_items {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+
+            &:last-child {
+              margin-top: 24px;
+            }
+          }
+          
+          .calc__sum_table-wrapper_item {
+            .calc__sum_table_wrapper_item-title {
+              color: $color_hsla;
+              opacity: 0.5;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.margin-top {
+  margin-top: 64px;
+}

@@ -1,4 +1,10 @@
 .party__wrapper {
+  margin-top: 260px;
+
+  @media (max-width: $big-mobile_width) {
+    margin-top: 200px;
+  }
+  
   .party__heading {
     max-width: 960px;
     margin: 0 auto;
