@@ -1,0 +1,85 @@
+html:not(.android-device) {
+    * {
+        text-rendering: geometricPrecision;
+    }
+}
+
+main,
+footer {
+    overflow-x: hidden;
+}
+
+body {
+    background-color: $color_100e0e;
+    font-family: $Montserrat-Regular, sans-serif;
+    font-size: 20px;
+    line-height: 1.4;
+    color: $color_hsla;
+
+    @media (max-width: $big-mobile_width) {
+        font-size: 16px;
+    }
+}
+
+.container {
+    position: relative;
+    max-width: 1320px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0 auto;
+
+    @media (max-width: $ipad_width) {
+        max-width: 700px;
+    }
+}
+
+.title {
+    font-family: $TheArtistSans_font, sans-serif;
+    font-size: 38px;
+    line-height: 1.368;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    position: relative;
+    color: $color_EFC18E;
+
+    @media (max-width: $ipad_width) {
+        font-size: 28px;
+        line-height: 1.4;
+    }
+
+    @media (max-width: $big-mobile_width) {
+        font-size: 20px;
+    }
+}
+
+.title_img {
+    padding-top: 75px;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%);
+        width: 262px;
+        height: 58px;
+        background: url(/images/title_svg.svg) 50% / cover no-repeat;
+
+        @media (max-width: $big-mobile_width) {
+            width: 155px;
+            height: 35px;
+        }
+    }
+}
+
+.text-heading {
+    margin-top: 16px;
+
+    @media (max-width: $big-mobile_width) {
+        margin-top: 10px;
+    }
+}
+
+.heading {
+    text-align: center;
+}
