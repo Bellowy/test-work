@@ -67,7 +67,85 @@
       @media (max-width: $ipad_width) {
         max-width: 100%;
         margin-top: 48px;
-        text-align: center;
+      }
+
+      .swiper {
+        &:before, &:after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: -5px;
+          z-index: 10;
+          width: 90px;
+          height: 100%;
+          background: linear-gradient(90deg, #100e0e 0, #100e0e 63%, rgba(16, 14, 14, .45));
+        }
+
+        &:after {
+          left: auto;
+          right: 0;
+          background: linear-gradient(90deg, rgba(16, 14, 14, .45) 0, #100e0e 37%, #100e0e);
+        }
+
+        swiper-slide {
+          max-width: 302px;
+        }
+      }
+
+      .market__card {
+        max-width: 302px;
+        padding: 10px 12px 24px;
+        border-radius: 10px;
+        background-color: $color_addition;
+
+        &-pic {
+          border-radius: 10px;
+          background-color: $color_addition;
+
+          img {
+            max-width: 100%;
+          }
+        }
+
+        &-info {
+          padding: 14px 24px 0;
+
+          &_category {
+            font-size: 14px;
+            font-weight: 500;
+            color: $color_hsla;
+          }
+
+          &_name {
+            margin-top: 4px;
+            font-size: 16px;
+            font-weight: 600;
+            color: $color_hsla;
+          }
+
+          &_about {
+            font-size: 14px;
+            font-weight: 500;
+            color: $color_hsla;
+          }
+
+          &_price {
+            position: relative;
+            margin-top: 16px;
+            font-weight: 600;
+            display: inline-block;
+
+            &:before {
+              content: '';
+              position: absolute;
+              top: 3px;
+              right: -25px;
+              width: 18px;
+              height: 20px;
+              background: url(/images/price-icon.svg) 50% / cover no-repeat;
+            }
+          }
+        }
       }
     }
   }
